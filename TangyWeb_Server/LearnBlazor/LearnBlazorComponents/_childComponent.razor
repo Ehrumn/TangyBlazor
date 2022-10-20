@@ -14,12 +14,18 @@
     }
 </div>
 <button class="btn btn-danger" @onclick="OnButtonClick">Button to be clicked</button>
+
+<_GrandChildComponent />
+
 @code {
     [Parameter]
-    public string Title { get; set; }
+    public string MessageForGrandChild { get; set; }
 
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string Title { get; set; }
 
     [Parameter]
     public RenderFragment DangerChildContent { get; set; }
